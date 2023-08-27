@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>view data</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<table id="example" class="table table-striped" style="width:100%">
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Alamat</th>
+        <th>Kota</th>
+        <th>Provinsi</th>
+        <th>Tgl Registrasi</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each = "customer: ${customer}">
+        <td th:text = "${customer.name}"></td>
+        <td th:text = "${customer.alamat}"></td>
+        <td th:text = "${customer.kota}"></td>
+        <td th:text = "${customer.provinsi}"></td>
+        <td th:text = "${customer.tgl_regis}"></td>
+        <td th:text = "${customer.status}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
